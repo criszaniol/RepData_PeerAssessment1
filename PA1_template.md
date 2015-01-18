@@ -4,6 +4,9 @@ output:
   html_document:
     keep_md: true
 ---
+#Reproducible Research: Peer Assessment 1
+
+
 This documents aims respond some issues about [Activity monitoring data](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip). The data is about personal movement using activity monitoring devices such as [Fibit](http://www.fitbit.com/), [Nike Fuelband](http://www.nike.com/us/en_us/c/nikeplus-fuelband)  or [Jawbone Up](https://jawbone.com/intl/up). The device collects data at 5 minutes intervals through out the day - consists of two months of data from an anonymous individual collect during Octover and November, 2012.
 
 The variables included in this dataset (17,568 observations) are:
@@ -89,6 +92,7 @@ hist(day_sum$s,breaks=20,main='Histogram of total number of steps per day',xlab=
 ```
 
 <img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+
 Note we disconsider NA values.
 
 The mean and median total number of steps taken per day are
@@ -160,6 +164,7 @@ max_interval
 ## [1] 08:35
 ## 288 Levels: 00:00 00:05 00:10 00:15 00:20 00:25 00:30 00:35 00:40 ... 23:55
 ```
+
 The maximum value, 206.1698113, occurs at 08:35.
 
 
@@ -252,6 +257,7 @@ median_totalstep_mod
 ```
 ## [1] 10766.19
 ```
+
 Another difference resides on the mean and on the median: 1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup> *versus* 9354.2295082 and 10395 founded before.
 
 ####Are there differences in activity patterns between weekdays and weekends?
@@ -306,4 +312,5 @@ ggplot(data = steps_weekdays,aes(as.POSIXct(interval,format="%H:%M"),steps)) +
 ```
 
 <img src="figure/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" style="display: block; margin: auto;" />
+
 We could see a smooth increase of activity in weekends in the afternoon, with peaks 16:00.
